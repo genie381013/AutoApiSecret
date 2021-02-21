@@ -76,6 +76,9 @@ def main():
         if req.get(r'https://graph.microsoft.com/v1.0/me/outlook/masterCategories',headers=headers).status_code == 200:
             num1+=1
             print('10调用成功'+str(num1)+'次')
+        if req.get(r'https://graph.microsoft.com/v1.0/me/drive/recent',headers=headers).status_code == 200:
+            num1+=1
+            print('11调用成功'+str(num1)+'次')
             print('此次运行结束时间为 :', localtime)
     except:
         print("pass")
